@@ -26,6 +26,8 @@ public class ChunkManager : MonoBehaviour
 
     void Start()
     {
+        // 플레이어 초기 위치 설정
+        player.position = new Vector3(0, 1, -20); // 청크 시작점 근처 (Z=2로 약간 오프셋)
         // 초기 청크 생성 (스테이지 1 시작)
         SpawnInitialChunks();
     }
@@ -76,7 +78,7 @@ public class ChunkManager : MonoBehaviour
         {
             GameObject[] currentChunks = GetCurrentStageChunks();
             int randomIndex = Random.Range(0, currentChunks.Length);
-            chunk = Instantiate(currentChunks[randomIndex], Vector3.zero, Quaternion.identity);
+            chunk = Instantiate(currentChunks[randomIndex], Vector3.zero, currentChunks[randomIndex].transform.rotation);
             Debug.Log($"스테이지 {currentStage} - 청크 {chunksSpawnedInStage + 1}/{chunksPerStage}: {currentChunks[randomIndex].name}");
         }
 
