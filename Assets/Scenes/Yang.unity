@@ -298,7 +298,10 @@ MonoBehaviour:
   player: {fileID: 1467668694}
   chunkLength: 50
   spawnDistance: 30
-  chunksPerStage: 10
+  chunksPerStage: 5
+  stage1Height: 0
+  stage2Height: 4
+  stage3Height: 8
 --- !u!1 &417857441
 GameObject:
   m_ObjectHideFlags: 0
