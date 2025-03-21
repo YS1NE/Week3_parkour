@@ -285,9 +285,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stage1Chunks:
-  - {fileID: 6658374118396417994, guid: 01cca7d964ebe2b4286424eb55cad06d, type: 3}
-  - {fileID: 8463528951780082411, guid: 3a08e23eea5467a44813aa0bff1a033c, type: 3}
-  - {fileID: 8997338316915887935, guid: 19f942341e958814892781022db66708, type: 3}
+  - {fileID: 4335837977958347354, guid: ec23f47898ec2c148b2715573c3531ba, type: 3}
+  - {fileID: 3736529340150907856, guid: 39a978cf2c7b46242a4bafde4091b16d, type: 3}
+  - {fileID: 3744008949534661183, guid: 67a9facba61847f4eb686e7686c2416d, type: 3}
+  - {fileID: 1706354754050461612, guid: 841984535c381d747878d4f2a0fd010f, type: 3}
   stage2Chunks:
   - {fileID: 6658374118396417994, guid: 01cca7d964ebe2b4286424eb55cad06d, type: 3}
   stage3Chunks:
@@ -297,8 +298,8 @@ MonoBehaviour:
   stage3LastChunk: {fileID: 1888061391513186355, guid: 07fa3e6e78aef62418d55e579d631111, type: 3}
   player: {fileID: 1467668694}
   chunkLength: 50
-  spawnDistance: 30
-  chunksPerStage: 5
+  spawnDistance: 150
+  chunksPerStage: 30
   stage1Height: 0
   stage2Height: 4
   stage3Height: 8
@@ -376,8 +377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790d0be5a85ec524ea04370cd393df58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countCollisionLow: 0
-  countCollisionHigh: 0
   countDist: 0
 --- !u!4 &1257329119
 Transform:

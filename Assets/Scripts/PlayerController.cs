@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         _inputActions = new InputActions();
         if(_inputActions != null)
         {
-            Debug.Log("inputActions has been loaded");
+            //Debug.Log("inputActions has been loaded");
         }
         _inputActions.Player.Move.performed += ctx => _moveInput = ctx.ReadValue<Vector2>();
         _inputActions.Player.Move.canceled += ctx => _moveInput = Vector2.zero;
@@ -194,7 +194,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(triggerFeet.isTriggered) // But not certain that it is on the airtime so resets the status
             {
-                Debug.LogWarning("Has some issues while jump amount is not charged even on the ground");
+                //Debug.LogWarning("Has some issues while jump amount is not charged even on the ground");
                 _jumpAmountCur = jumpAmount;
                 //_isUsingRigidbody = false;
             }
@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour
         Vector3 jumpForce = (_movement.normalized + Vector3.up) * jumpPowerCur;
         rb.AddForce(jumpForce, ForceMode.Impulse);
 
-        Debug.Log($"Jump Power: {jumpPowerCur}");
+       // Debug.Log($"Jump Power: {jumpPowerCur}");
     }
 
     #endregion
@@ -231,7 +231,7 @@ public class PlayerController : MonoBehaviour
         {
             _moveSpeedCur = moveSpeedStunned;
             isAccelerating = false;
-            Debug.LogWarning("You are too fast to land off without injury");
+           // Debug.LogWarning("You are too fast to land off without injury");
 
             yield return new WaitForSeconds(0.75f);
         }
@@ -248,7 +248,7 @@ public class PlayerController : MonoBehaviour
     public void SetRestrictedLand()
     {
         rb.linearVelocity = Vector3.zero;
-        Debug.LogWarning("You have landed area with restricted jump");
+        //Debug.LogWarning("You have landed area with restricted jump");
     }
 
     void SetAcceleratingOn()
@@ -276,7 +276,7 @@ public class PlayerController : MonoBehaviour
     {
         if(_jumpAmountCur != jumpAmount) //!triggerFeet.isTriggered
         {
-            Debug.Log("You need to be on air to set the prep mode of anim.");
+           // Debug.Log("You need to be on air to set the prep mode of anim.");
             _wallKickStatus = value;
         }
     }
